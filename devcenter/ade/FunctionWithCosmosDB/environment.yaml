@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://github.com/Azure/deployment-environments/releases/download/2022-11-11-preview/manifest.schema.json
+name: FunctionWithCosmosDB
+version: 1.0.0
+summary: API in Azure Functions with CosmosDB
+description: Deploys a Function App in NodeJS as an API connected to CosmosDB
+runner: ARM
+templatePath: main.json
+
+parameters:
+  - id: name
+    name: Environment name
+    description: "Name of the environment"
+    type: string
+  - id: location
+    name: location
+    description: "Location to deploy the environment resources"
+    default: "francecentral"
+    type: string

@@ -1,14 +1,12 @@
-# Project
+# Platform engineering for devs Hands-on Lab
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This workshop will guide you on how to fast start your dev experience, how to deploy to Azure, and how to detect potential issues with your code during runtime.
 
-As the maintainer of this project, please make a few updates: 
+## Provisioning
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+Since DevBox can takes hours to deploy, it's interesting to prepare the environment before the students use the lab. You can have **one** subscription with **one** devcenter and **one** (or several) projects. Then, each student will use his own dev box. DevBox can be requested in advance.
+
+Follow [the procedure](./provisioning/provisioning.md)
 
 ## Contributing
 

@@ -1,0 +1,8 @@
+@host = https://xyz-api-func.azurewebsites.net
+
+POST {{host}}/api/qna HTTP/1.1
+content-type: application/json
+
+{
+    "question": "what is the answer to life, the universe, and everything?"
+}
