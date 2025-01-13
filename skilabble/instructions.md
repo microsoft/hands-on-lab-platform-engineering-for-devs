@@ -163,26 +163,22 @@ We will be using a Dev Box with a customized image intended for full stack devel
 
 > [!note] **Task**
 > 
-> On your **desktop**, clone the project [https://github.com/ikhemissi/hands-on-lab-platform-engineering-for-devs](https://github.com/ikhemissi/hands-on-lab-platform-engineering-for-devs)
+> On your **desktop**, clone the project [https://github.com/microsoft/hands-on-lab-platform-engineering-for-devs](https://github.com/microsoft/hands-on-lab-platform-engineering-for-devs)
 > Place your command line inside this new folder.
-
 
 >[+] *Toggle Solution*
 >
 > Use the integrated terminal to run the following commands:
 > 
 > ```sh
-> git clone https://github.com/ikhemissi/hands-on-lab-platform-engineering-for-devs.git
+> git clone https://github.com/microsoft/hands-on-lab-platform-engineering-for-devs.git
 > ```
-
 
 ## Update the code
 
 > [!note] **Task**
 > 
 > Update the *qna* endpoint in *servicess/api/src/api.js* by prefixing the return value with a prefix of your choice
-
-
 
 >[+] *Toggle Solution*
 >
@@ -197,7 +193,6 @@ We will be using a Dev Box with a customized image intended for full stack devel
 [resourcemanager]: https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview
 [ade]: https://learn.microsoft.com/en-us/azure/deployment-environments/overview-what-is-azure-deployment-environments
 [azd]: https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview
-
 
 In this second lab we will focus on how to deploy our services to Azure.
 

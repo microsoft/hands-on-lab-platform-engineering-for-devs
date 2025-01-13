@@ -8,7 +8,7 @@ export RESOURCE_GROUP="rg-plateng-for-devs"
 export SUBSCRIPTION_ID="XXXXXXXX"
 export PROJECT_NAME="frontend-project"
 export KV_NAME="kv"$RANDOM_NUMBER
-export REPO_URL="https://github.com/ikhemissi/hands-on-lab-platform-engineering-for-devs.git"
+export REPO_URL="https://github.com/microsoft/hands-on-lab-platform-engineering-for-devs.git"
 export PAT_TOKEN="github_pat_11ABTRVVY0nOXfkwMj8sy9XXXX" # read-only one one repo containing the devcenter folder with ADE definitions (and optionally tasks)
 
 #Az Login
