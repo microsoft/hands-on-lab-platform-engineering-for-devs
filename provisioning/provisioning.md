@@ -2,7 +2,7 @@
 
 ## Deploying the DevCenter resources
 
-One script  ([deploy.sh](deploy.sh)) is available to deploy:
+One script  ([deploy.sh](manual/deploy.sh)) is available to deploy:
 - A devcenter with pools, definitions, catalog, projects, etc
 
 ## Create devbox on behalf of users

@@ -3,7 +3,7 @@
 #Set Variables
 export LOCATION="westeurope"
 RANDOM_NUMBER=$(shuf -i 10000-99999 -n 1)
-export DEVCENTER_NAME="mydevcenter-"$RANDOM_NUMBER
+export DEVCENTER_NAME="web-dev-center-"$RANDOM_NUMBER
 export RESOURCE_GROUP="rg-plateng-for-devs"
 export SUBSCRIPTION_ID="XXXXXXXX"
 export PROJECT_NAME="frontend-project"
