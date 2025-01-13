@@ -26,3 +26,33 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2022-09-01' = {
   location: location
 }
 
+
+module keyvault './modules/keyvault/main.bicep' = {
+  scope: az.resourceGroup(resourceGroupName)
+  name: guid('keyvault', guidSeed)
+  dependsOn: [
+    resourceGroup
+  ]
+  params: {
+    locationName: location
+    resourceName: devCenterName
+  }
+}
+
+
+module devcenter './modules/devcenter/main.bicep' = {
+  scope: az.resourceGroup(resourceGroupName)
+  name: guid('devcenter', guidSeed)
+  dependsOn: [
+    resourceGroup
+    keyvault
+  ]
+  params: {
+    locationName: location
+    resourceName: devCenterName
+    projectName: projectName
+    // projectName: projectName
+    // environmentTypeName: environmentTypeName
+    // guidSeed: guidSeed
+  }
+}

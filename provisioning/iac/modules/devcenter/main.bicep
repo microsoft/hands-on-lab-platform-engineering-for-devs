@@ -1,22 +1,29 @@
-// ------
-// Scopes
-// ------
-
 targetScope = 'resourceGroup'
 
 @description('Name of Dev Center')
 @minLength(3)
 @maxLength(26)
-param devCenterName string
+param resourceName string
 
-param location string = resourceGroup().location
+param locationName string = resourceGroup().location
+
+param projectName string
 
 // DevCenter
 resource devcenter 'Microsoft.DevCenter/devcenters@2023-04-01' = {
-  name: devCenterName
-  location: location
+  name: resourceName
+  location: locationName
   identity: {
     type: 'SystemAssigned'
   }
   properties: {}
+}
+
+module project './projects/main.bicep' = {
+  name: guid('project')
+  params: {
+    locationName: locationName
+    resourceName: projectName
+    devcenterId: devcenter.id
+  }
 }
