@@ -5,7 +5,7 @@ param resourceGroupName string = 'rg-plateng-for-devs'
 
 @description('Name of Dev Center')
 @minLength(3)
-@maxLength(26)
+@maxLength(20)
 param devCenterName string = 'web-dev-center'
 
 @description('Name of Project associated with Dev Center')
@@ -34,7 +34,7 @@ module keyvault './modules/keyvault/main.bicep' = {
     resourceGroup
   ]
   params: {
-    locationName: location
+    location: location
     resourceName: devCenterName
   }
 }
@@ -48,7 +48,7 @@ module devcenter './modules/devcenter/main.bicep' = {
     keyvault
   ]
   params: {
-    locationName: location
+    location: location
     resourceName: devCenterName
     projectName: projectName
     // projectName: projectName

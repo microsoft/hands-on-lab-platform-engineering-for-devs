@@ -1,6 +1,6 @@
 @minLength(2)
 @description('The location to use for the deployment. defaults to Resource Groups location.')
-param locationName string = resourceGroup().location
+param location string = resourceGroup().location
 
 @minLength(3)
 @maxLength(20)
@@ -12,7 +12,7 @@ var akvName = length(akvRawName) > 24 ? substring(akvRawName, 0, 24) : akvRawNam
 
 resource kv 'Microsoft.KeyVault/vaults@2021-11-01-preview' = {
   name: akvName
-  location: locationName
+  location: location
   properties: {
     tenantId: subscription().tenantId
     sku: {
